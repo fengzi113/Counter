@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--SCORE-->
+    <style name="score">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:text">99</item>
+        <item name="android:textColor">#F57C00</item>
+        <item name="android:textSize">190sp</item>
+
+    </style>
+    <!--KEY LEFT-->
+    <style name="key_Left">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginRight">13dp</item>
+        <item name="android:layout_toLeftOf">@+id/score_A</item>
+
+    </style>
+    <!--KEY RIGHT-->
+    <style name="key_Right">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_toRightOf">@+id/score_B</item>
+
+    </style>
+    <!--TEAM A B-->
+    <style name="editview">
+
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@null</item>
+        <item name="android:cursorVisible">false</item>
+
+    </style>
+
+    <!--全屏，无标题栏-->
+    <style name="NotitleTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--空白-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <!-- 图标以上部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="horizontal">
+
+        <!--左部分-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--HOME-->
+            <EditText
+                android:text="HOME"
+                style="@style/editview" />
+            <!--按钮key 和 score A-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--SCORE A-->
+                <TextView
+                    android:id="@+id/score_A"
+                    style="@style/score" />
+                <!--guest 左按钮 +1-->
+                <TextView
+                    android:id="@+id/addOne1"
+                    style="@style/key_Left"
+                    android:layout_alignTop="@+id/score_A"
+                    android:onClick="addOneA"
+                    android:text="+ 1" />
+                <!--guest 左按钮 +3-->
+                <TextView
+                    android:id="@+id/addThree1"
+                    style="@style/key_Left"
+                    android:layout_below="@+id/addOne1"
+                    android:layout_marginTop="30dp"
+                    android:onClick="addThreeA"
+                    android:text="+ 3" />
+                <!--guest 左按钮 -1-->
+                <TextView
+                    android:id="@+id/negativeOne1"
+                    style="@style/key_Left"
+                    android:layout_below="@+id/addThree1"
+                    android:layout_marginTop="30dp"
+                    android:onClick="negativeOneA"
+                    android:text="-- 1" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--中间的时间-->
+        <TextClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp" />
+
+        <!--右部分-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--GUEST-->
+            <EditText
+                android:text="GUEST"
+                style="@style/editview"/>
+            <!--按钮 和 score B-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--SCORE B-->
+                <TextView
+                    android:id="@+id/score_B"
+                    style="@style/score" />
+                <!--guest 右按钮 +1-->
+                <TextView
+                    android:id="@+id/addOne2"
+                    style="@style/key_Right"
+                    android:layout_alignTop="@+id/score_B"
+                    android:onClick="addOneB"
+                    android:text="+ 1" />
+                <!--guest 左按钮 +3-->
+                <TextView
+                    android:id="@+id/addThree2"
+                    style="@style/key_Right"
+                    android:layout_below="@+id/addOne2"
+                    android:layout_marginTop="30dp"
+                    android:onClick="addThreeB"
+                    android:text="+ 3" />
+                <!--guest 左按钮 -1-->
+                <TextView
+                    android:id="@+id/negativeOne2"
+                    style="@style/key_Right"
+                    android:layout_below="@+id/addThree2"
+                    android:layout_marginTop="30dp"
+                    android:onClick="negativeOneB"
+                    android:text="-- 1" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--底排图标-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <!--哨声-->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="whistle"
+            android:src="@drawable/ic_whistle" />
+
+        <!--重置-->
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="reset"
+            android:src="@drawable/ic_reset" />
+
+        <!--拍照-->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_photo"
+            android:onClick="dispatchTakePictureIntent"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
